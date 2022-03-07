@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{ulem}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\title{Linear Algebra by Gilbert Strang - Notes}
+\author{Syed Khalid }
+
+\renewcommand{\t}[1]{\text{#1}}
+\renewcommand{\it}[1]{\textit{#1}} 
+\renewcommand{\bf}[1]{\textbf{#1}} 
+
+\newcommand{\s}[2]{\sum_{#1}^{#2}}
+\renewcommand{\l}[2]{\lim_{{#1}\to{#2}}}
+\renewcommand{\b}[1]{\left(#1\right)}
+\renewcommand{\i}[4]{\int\limits_{#3}^{#4}{#1}\,\mathrm{d}{#2}}
+\newcommand{\sn}[2]{#1\times 10^{#2}}
+
+\renewcommand{\v}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}}
+\newcommand{\vv}[3]{\begin{bmatrix} #1 \\ #2 \\ #3 \end{bmatrix}}
+\newcommand{\vn}[3]{\begin{bmatrix} #1 \\ #2 \\ \vdots \\#3 \end{bmatrix}}
+
+\renewcommand{\r}[2]{\begin{bmatrix} #1 & #2 \end{bmatrix}}
+\newcommand{\rr}[3]{\begin{bmatrix} #1 & #2 & #3 \end{bmatrix}}
+\newcommand{\rn}[3]{\begin{bmatrix} #1 & #2 & \cdots &#3 \end{bmatrix}}
+
+\renewcommand{\pm}[4]{\begin{pmatrix} #1 & #2 \\ #3 & #4\end{pmatrix}}
+\newcommand{\bm}[4]{\begin{bmatrix} #1 & #2 \\ #3 & #4\end{bmatrix}}
+\renewcommand{\d}[4]{\begin{vmatrix} #1 & #2 \\ #3 & #4\end{vmatrix}}
+
+\newcommand{\pmm}[9]{\begin{pmatrix} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9 \end{pmatrix}}
+\newcommand{\bmm}[9]{\begin{bmatrix} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9 \end{bmatrix}}
+\newcommand{\vmm}[9]{\begin{vmatrix} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9 \end{vmatrix}}
+
+\newcommand{\pmmn}[9]{\begin{pmatrix} #1 & #2 & #3 \\ #4 & #5 & #6 \\ \vdots & \vdots & \ddots \\ #7 & #8 & #9 \end{pmatrix}}
+
+\renewcommand{\l}{\par\noindent\rule{\textwidth}{0.4pt}}
+\begin{document}
+\maketitle 
+\section{Ch-1 Matrices and Gaussian Elimination}
+\subsection{Introduction}
+For solving a system of linear equations, we represent it in matrix form:
+\begin{align*}
+a_{11}x_1 + a_{12}x_2 + \dots a_{1n}x_n = b_1 \\
+    a_{21}x_1 + a_{22}x_2 +\dots a_{2n}x_n = b_2 \\
+    \vdots \vdots \vdots \\
+    a_{m1}x_1 + a_{m2}x_2 + \dots a_{mn}x_n = b_m \\ 
+\end{align*} 
+as, 
+$$ \equiv \pmmn{a_{11}}{a_{12}}{\dots a_{1n}}
+{a_{21}}{a_{22}}{\dots a_{2n}}
+{a_{m1}}{a_{m2}}{ a_{mn}} \vn{x_1}{x_2}{x_3} =
+ \vn{b_1}{b_2}{b_m}$$ 
+
+\subsection{Geometry of Linear Equation}
+\end{document}

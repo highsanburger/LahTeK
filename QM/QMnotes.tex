@@ -1,0 +1,152 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{ulem}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+%Text   
+\renewcommand{\t}[1]{\text{#1}}
+\renewcommand{\it}[1]{\textit{#1}} 
+\renewcommand{\bf}[1]{\textbf{#1}} 
+
+%Calculus 
+\newcommand{\s}[2]{\sum_{#1}^{#2}}
+\renewcommand{\l}[2]{\lim_{{#1}\to{#2}}}
+\renewcommand{\b}[1]{\left(#1\right)}
+\renewcommand{\i}[4]{\int\limits_{#3}^{#4}{#1}\,\mathrm{d}{#2}}
+\renewcommand{\d}{\mathrm{d}}
+
+
+%Sconce
+\newcommand{\sn}[2]{#1\times 10^{#2}}
+\newcommand{\p}{\psi}
+\renewcommand{\P}{\Psi}
+\newcommand{\px}{\psi(x)}
+\newcommand{\pxt}{\psi(x,t)}
+\newcommand{\Px}{\Psi{x}}
+\newcommand{\Pxt}{\Psi(x,t)}
+\renewcommand{\Px}{\Psi}
+
+% Linear Algebra
+\renewcommand{\v}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}}
+\newcommand{\vv}[3]{\begin{bmatrix} #1 \\ #2 \\ #3 \end{bmatrix}}
+\newcommand{\vn}[3]{\begin{bmatrix} #1 \\ #2 \\ \   vdots \\#3 \end{bmatrix}}
+
+\renewcommand{\r}[2]{\begin{bmatrix} #1 & #2 \end{bmatrix}}
+\newcommand{\rr}[3]{\begin{bmatrix} #1 & #2 & #3 \end{bmatrix}}
+\newcommand{\rn}[3]{\begin{bmatrix} #1 & #2 & \cdots &#3 \end{bmatrix}}
+
+\renewcommand{\pm}[4]{\begin{pmatrix} #1 & #2 \\ #3 & #4\end{pmatrix}}
+\newcommand{\bm}[4]{\begin{bmatrix} #1 & #2 \\ #3 & #4\end{bmatrix}}
+\renewcommand{\d}[4]{\begin{vmatrix} #1 & #2 \\ #3 & #4\end{vmatrix}}
+
+\newcommand{\pmm}[9]{\begin{pmatrix} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9 \end{pmatrix}}
+\newcommand{\bmm}[9]{\begin{bmatrix} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9 \end{bmatrix}}
+\newcommand{\vmm}[9]{\begin{vmatrix} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9 \end{vmatrix}}
+
+
+
+
+\title{\bf{Quantum Mechanics Griffiths Notes}}
+\author{Syed Khalid}
+\date{October 2021}
+
+\begin{document} 
+\maketitle 
+\section{Ch1 Wave Function}
+\subsection{Schrodinger Equation}
+$$i\hbar\pdv[]{\P}{t}=-\frac{\hbar^2}{2m}\pdv[2]{\P}{x}+V\P$$
+Probability of finding particle between $a$ and $b$ at time $t$
+$=\i{\abs{\Pxt}^2}{x}{a}{b}$
+
+\subsection{Probability}
+
+For a Discrete Variable $j$ :
+\begin{align*}
+\ev{j}=\frac{\sum jN(j)}{N_{total}}
+=\s{j=0}{\infty}jP(j) \\
+\ev{f(j)}=\s{j=0}{\infty}f(j)P(j)\\
+\sigma=\sqrt{\ev{(\ev{j}-j)^2}}=\sqrt{\ev{j^2}-\ev{j}^2}
+\end{align*}
+For a Continuous Variable $x$:
+\begin{align*}
+    P(c\in[x,x+dx])=\rho(x)dx\\
+    P(x\in[a,b])=\i{\rho(x)}{x}{a}{b}\\
+    \i{\rho(x)}{x}{-\infty}{\infty}=1\\
+    \ev{x}=\i{x\rho(x)}{x}{-\infty}{\infty}\\
+    \ev{f(x)}=\i{f(x)\rho(x)}{x}{-\infty}{\infty}
+\end{align*}
+\subsection{Nomralization}
+
+From the Born's Statistical Interpretation of $\P$:
+$$\i{\abs{\Pxt}^2}{x}{-\infty}{\infty}=1$$
+$$\dv[]{}{t}\i{\abs{\Pxt}^2}{x}{-\infty}{\infty}=0$$
+Hence once the wave function is normalized at any $t$ its normalized for all $t$.
+\subsection{Momentum}
+$$\ev{x}=\i{\P^*[x]\P}{x}{D}{}$$
+$$\ev{p}=\i{\P^*[-i\hbar\pdv{}{x}]\P}{x}{D}{}$$
+\subsection{Uncertainty Principle}
+
+$$\sigma_x\sigma_p\geq\frac{\hbar}{2}$$
+\section{Time Independependent Schrodinger Equations}
+\subsection{Stationary States}
+Let $V(x)$ be independependent of time and $\Pxt=\px\varphi(t)$. From Schrodinger Equations we get the TISE:
+$$\boxed{-\frac{\hbar^2}{2m}\dv[2]{\p}{x}+V\p=E\p},\,\,\,\,\dv{\varphi}{t}=-\frac{iE}{\hbar}\varphi\implies\varphi(t)=e^{-iEt/\hbar}$$
+Where $\Pxt=\px e^{-iEt/\hbar}$ are stationary states as the probability density and every expectation value is independependent of time. 
+$$\hat{H}=-\frac{\hbar^2}{2m}\dv[2]{}{x}+V(x), \,\,\,\, \boxed{\hat{H}\p=E\p},\,\,\,\ev{H}=E$$
+TISE yields an infinite number of solutions each associated with an allowed energy.
+ Any wave function can be written as a linear combination of these infinite stationary states:
+ $$\Pxt=\s{i=0}{\infty}c_i\P_i(x,t)=\s{i=1}{\infty}c_i  \p_i(x)e^{-iEt/\hbar}$$
+Where $\abs{c_i}^2$ represent te probability of the measurement of energy returning $E_i$. Thus:
+$$\s{i=1}{\infty}\abs{c_i}^2=1,\,\,\, \ev{H}=\s{i=1}{\infty}\abs{c_i}^2E_i$$
+\subsection{Infinite Square Well}
+We definte $V(x)=0$ when $x\in(0,a)$ else, $V(x)=\infty$. TISE becomes:
+$$\pdv[2]{\px}{x}=-(\frac{\sqrt{2mE}}{\hbar})^2\px$$
+Resembling the Simple Harmonic Oscillator($\pdv[2]{f}{x}=-k^2f$). Applying boundary conditions $\p (0)=0,\,\,\,\p(a)=0$ and solving we get:
+$$\p_n(x)=\sqrt\frac{2}{a}\sin(\frac{n\pi}{a}x),\,\,\,n=1,2,3\hdots$$
+$$E_n=\frac{n^2\hbar^2\pi^2}{2ma^2}$$
+$\p_n(x)$ are alternatively even and odd w.r.t to $x=a$. $\p_i(x)$ has $i-1$ nodes. Also they are orthonormal:
+$$\i{\p_m(x)^*\p_n(x)}{x}{-\infty}{\infty}=\delta_{mn}$$ 
+They are also complete:
+$$\Pxt=\sqrt{\frac{2}{a}}\s{n=1}{\infty}c_nsin(\frac{n\pi}{a}x)e^{-it(n^2\pi^2\hbar/2ma^2)}
+\\,\,\,\,c_n=\sqrt{\frac{2}{a}}\i{sin(\frac{n\pi}{a}x)\P(x,0)}{x}{0}{a}$$
+This is nothing but the Fourier series.
+\subsection{Harmonic Oscillator}
+Defined by the potential- $V(x)=\cfrac{1}{2}m\omega^2x^2$. Most arbitary potentials can be expressed in this form;
+$$V(x) = V(x_0)+V'(x_0)(x-x_0)+\cfrac{1}{2}V''(x_0)(x-x_0)^2+\dots$$
+where $x_0$ is a minima. As
+\subsubsection{Algebraic Method}
+
+\subsubsection{Analytic Method}
+\subsection{Free Particle}
+\subsection{Delta-Function Potential}
+\subsubsection{Bound States and Scattering States}
+\subsubsection{Delta-Function Well}
+\subsection{Finite Square Well}
+$$ \bf{4.}\,\,\,\,\,\,\, V_1 = \cfrac{R_1}{R_1+R_2}\times V = \cfrac{10k}{10k+20k}5V = 1.67V$$
+$$ \,\,\,\,\,\,\,\,\, V_2 = \cfrac{R_2}{R_1+R_2}\times V = \cfrac{20k}{10k+20k}5V = 3.33V$$
+
+$$I_1 = \cfrac{R_2}{R_1+R_2}\times I = \cfrac{2k}{1k+2k}\times 15mA = 5mA$$
+$$I_2 = \cfrac{R_1}{R_1+R_2}\times I = \cfrac{1k}{1k+2k}\times 15mA = 2.5mA$$
+
+$$ C_{12} = \cfrac{C_1 \times C_2}{C_1+C_2} \implies \cfrac{20\text{mF}  \times 30\text{mF}}{20\text{mF}+30\text{mF}} = 12 \text{mF} $$
+$$ C_{34} = C_3 + C_4 \implies 40 \text{mF} + 20 \text{mF} = 60 \text{mF} $$
+$$ C_{total} = \cfrac{C_{12} \times C_{34}}{C_{12}+C_{34}} \implies \cfrac{12 \text{mF}\times 60\text{mF}}{12\text{mF}+60\text{mF}} = 10 \text{mF}$$
+$$ Q = C_{total} \times V_{total} \implies 10\text{mF} \times 30 \text{V} = 300 \text{mC}$$
+$$V_1 = \cfrac{Q}{C_1} \implies \cfrac{300 \text{mC}}{20\text{mF}} = 15\text{V} $$
+$$V_2 = \cfrac{Q}{C_2} \implies \cfrac{300 \text{mC}}{30\text{mF}} = 10\text{V} $$
+$$V_3 = \cfrac{Q}{C_{34}} \implies \cfrac{300 \text{mC}}{60\text{mF}} = 5\text{V} $$
+
+
+$$    R_{total} = R_1+R_2+R_3 \implies 10k \Omega + 20k \Omega + 30k \Omega = 60k \Omega$$
+$$   C_{total} = C_1+\cfrac{C_2\times C_3}{C_2+C_3} \implies 10 \text{nF}+ \cfrac{20\text{nF}\times 20\text{nF}}{20\text{nF}+20\text{nF}} = 20\text{nF}$$
+$$    L_{total} = \cfrac{L_1\times(L_2+L_3)}{L_1+L_2+L_3} \implies \cfrac{10\text{mH}\times(4\text{mH}+8\text{mH})}{10\text{mH}+4\text{mH}+8\text{mH}} = 5.45 \text{mH}$$
+
+
+\end{document}
+
+
