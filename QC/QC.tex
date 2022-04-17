@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{ulem}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{blindtext}
+
+\usepackage{draftwatermark}
+\SetWatermarkText{21BEE1288}
+\SetWatermarkScale{4}
+\SetWatermarkLightness{0.96}
+
+\usepackage{pgf}
+\usepackage{pgfpages}
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{1pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+\pgfpagesuselayout{boxed}
+
+\title{\textbf{Quantum Information and Computing Notes}}
+\author{Syed Khalid}
+
+\begin{document}
+
+\maketitle
+\section{Lecture 1}
+\begin{itemize}
+    \item Serial - Parallel in Classical Computing using many processors
+    \item History of QC \\
+    Feynman : capturing probabilistic nature of QM\\
+    Shor : factorising big composite number  using QC - no classical algorithm to solven polynomial time\\
+    
+    \item Inherent parallelism in QC as all bits are linear combinations
+    \item \textit{Entanglement} 
+    \item Moore's Law - Number density of transistors doubles every two months\\
+    inter transistor distance decreases - \textit{Miniaturization}\\
+    as you get smaller quantum effects get more significant 
+    \\ Heat produced by one component affects other \\
+    Heat produced $\propto$ volume but Removing Heat $\propto$ surface
+    \item  Landaur's Principle - Every physically irreversible process (most classical ) 
+    $n$  bits of information increases entropy by $nk_{b} \mathrm{log} 2$
+    \item Reversible classical gates - \textit{collecting garbage?}
+    \item Complexity of problem - dependence of time and memory on length of input\\
+    polynomial,log,constant time - easy problems\\
+    $2^{n}$ - hard problem\\ 
+
+\end{itemize}
+
+\section{\uline{Postulates of Quantum Mechanics :-}} 
+\
+\begin{flushright}
+\today
+\end{flushright}
+
+\begin{enumerate}
+  \item 
+\end{enumerate}
+
+\section{\underline{Qubits}}
+\begin{flushright}
+  16/4  
+\end{flushright}
+
+\begin{itemize}
+  \item cbit - 0/1 
+  \item qbit - 2D Hilbert space, $\ket{0} , \ket{1} $ \\
+  choose orthonormal states $  \bra{0}\ket{1} = \bra{1}\ket{0} =  0   $ and $ \bra{0}\ket{0} = \bra{1}\ket{1} = 1 $\\
+  Any linear combination is valid - $\ket{\psi} = c_0 \ket{0} + c_1 \ket{1} | c_1 ,c_2 \in \mathbb{C}$ \\
+  Matrix representation - 
+$ ([2 3]) $
+  
+
+\end{itemize}
+
+$\frac{\gamma}{\pi}$ 
+$ k^{$1}
+
+
+
+
+
+
+
+\end{document}
