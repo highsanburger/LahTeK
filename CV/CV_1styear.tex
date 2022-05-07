@@ -1,0 +1,135 @@
+%-------------------------
+% Resume in Latex
+% Author : Vidushi Wahal
+%------------------------
+
+\documentclass[14pt]{extarticle}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+% \usepackage[a4paper, landscape, total={8in, 6in}]{geometry} 
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[5]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      #3 \\
+      \textit{\small#4} & \textit{\small #5} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usepackage{showframe} 
+\usepackage{fancybox} 
+\usepackage{xspace} 
+\usepackage{umoline} 
+\usepackage{makecell} 
+\usepackage{graphicx} 
+
+\begin{document}
+\thisfancyput(3.25in,-4.5in){%
+\setlength{\unitlength}{1in}\fancyoval(8,10.5)}
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\Huge Syed Khalid}} & Email : \href{mailto:syed.khalid2021@vitstudent.ac.in}{\textbf{syed.khalid2021@vitstudent.ac.in}}\\
+ \\ 
+   & Mobile : +91 - 98402 80890\\
+\end{tabular*}
+
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+ \resumeSubHeadingListStart
+ \item{\textbf{Programming Languages}{: Python, \textsc{Matlab}\xspace, \LaTeX, Java, MySQL.}}
+      \item{\textbf{Mathematical Skills: }{Linear Algebra, Differential Equations, Mathematical Reasoning.}}
+ \item{\textbf{Behavioral Skills: }{Enthusiastic Self-Learner, Strong Communication \& Presentation, Committed \& Hardworking.}}
+ \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+    
+\resumeItemListStart
+
+  \resumeItem{Project: }
+  {Worked on a Guided Project conducted by Imperial College London on implementing \emph{Finite Element Method} for solving PDEs using Python from scratch.}
+          
+\resumeItem{Courses:  }
+{
+    \begin{itemize}%[leftmargin=0in,labelsep=.15in] 
+      \item \underline{ \textbf{Practical Numerical Methods using Python:}-} \\ Completed from Ludwig-Maximilians-Universität München (LMU), on Coursera with a 91\% grade. 
+ Implemented the following methods :-
+ \\
+\emph{Finite Difference, Pseudo-Spectral, Finite Element, Spectral.}
+\item Have a good exposure to Quantum Mechanics and other undergraduate Physics subjects through courses done from MITOCW and NPTEL. 
+\item Completed a course on Advanced Calculus in \textsc{Matlab}\xspace : in 1st semester with top grade.
+\item Other online courses done on  NumPy, Matplotlib, Scipy, Pandas, FEniCS, SymPy, Git collaboration \& Linux.
+    \end{itemize}
+}
+
+\resumeItemListEnd
+            
+%-----------EDUCATION-----------------
+\section{Education}
+ 
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+    {\scalebox{0.7}{\textbullet}{}{}  {\Overline{BTech. }{}    Electrical and Electronics   }}{Vellore Institute of Technology}{\small{(Completed 1st Sem with 8.9 GPA )}}{Since Sep. 2021}{Vandalur, Chennai}
+     
+    \resumeSubheading
+    {\scalebox{0.7}{\textbullet}{}{} {Grade 12}}
+      {National Public School (CBSE)}{(\small{Aggregate - 90\%)}}{June  2021}
+      {Gopalapuram, Chennai}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
