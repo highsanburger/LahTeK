@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{ulem}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{blindtext}
+
+\usepackage{draftwatermark}
+\SetWatermarkText{21BEE1288}
+\SetWatermarkScale{4}
+\SetWatermarkLightness{0.96}
+
+\usepackage{pgf}
+\usepackage{pgfpages}
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{1pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+\pgfpagesuselayout{boxed}
+
+\title{\textbf{Product Description of Laptop Bag}}
+\author{Syed Khalid}
+\date{April 22, 2022}
+\begin{document}
+
+\maketitle
+
+Beautiful \& sturdy laptop bag made in China.\\ 
+
+Designed and measured to fit a 14 inch laptop and with a pocket for your charger cable.\\
+
+\textbf{Design Details:}
+\begin{itemize}
+  \item Comes in Rain Blue, Sunflower Yellow and Pitch Black themes.
+  \item We use only natural plant/mineral based dyes.
+  \item Highly Water Resistant.
+  \item Extremely Lightweight. 
+
+    \item   Inbuilt Locking System.
+ 
+  \item  No Chemicals or Chemical Dyes
+  \item 2 year warranty!
+\end{itemize}
+\end{document}

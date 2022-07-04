@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{ulem}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{blindtext}
+
+\usepackage{draftwatermark}
+\SetWatermarkText{21BEE1288}
+\SetWatermarkScale{4}
+\SetWatermarkLightness{0.96}
+
+\usepackage{pgf}
+\usepackage{pgfpages}
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{1pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+\pgfpagesuselayout{boxed}
+
+\title{\textbf{Video Summary of Ratan Tata interview}}
+\author{Syed Khalid}
+
+\begin{document}
+
+\maketitle
+\begin{enumerate}
+  \item RT boasts about his hyper-capitalistic company's philanthropic interests, with a strong claim that the company's interests are not in profit but only in the nation.
+  \item RT analyses how the needs of the nation have been inverted, corrupted even by huge MNCs.
+  \item RT expounds the many seeming virtues of the TATA work culture. He also continues to confess his many mistakes as a leader. 
+  \item RT gives many examples of his humility.
+\end{enumerate}
+
+
+\end{document}

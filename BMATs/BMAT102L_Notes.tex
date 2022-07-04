@@ -1,0 +1,107 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{ulem}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{draftwatermark}
+\usepackage{commath} 
+\SetWatermarkText{21BEE1288}
+\SetWatermarkScale{4}
+\SetWatermarkLightness{0.96}
+
+\usepackage{pgf}
+\usepackage{pgfpages}
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{1pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+\pgfpagesuselayout{boxed}
+
+\title{\textbf{BMAT102L Notes}}
+\author{Syed Khalid}
+    
+\begin{document}
+
+\maketitle
+
+\section{Laplace Transnforms}%
+  \label{sec:Laplace Transnforms}
+\subsection{Theory}%
+  \label{sub:Theory}
+  \underline{Definition:-} Let $f(t)$ be a function of $t$ defined
+  for $0\le t\le \infty$ then the Laplace transform of $f$ is defined as :
+  \[
+    \mathcal{L} \left \{f(t) \right \} = \int_0^\infty e^{-st}f(t)dt = F(s) 
+  .\] 
+  \subsection{Formulae}
+ \begin{enumerate}
+   \item $ \mathcal{L} \left \{1 \right \} = \frac{1}{s}$
+   \item    $ \mathcal{L} \left \{t^n \right \} = \frac{\Gamma (n+1) }{s^{n+1}}$
+   \item $ \mathcal{L} \left \{ e^{at} \right \} = \frac{1}{s-a} $
+   \item $ \mathcal{L} \left \{\sin at \right \} = \frac{a}{s^2+a^2} $
+   \item $ \mathcal{L} \left \{\cos at \right \} = \frac{s}{s^2+a^2} $
+   \item $ \mathcal{L} \left \{\sinh at \right \} = \frac{a}{s^2-a^2} $
+   \item $ \mathcal{L} \left \{\cosh at \right \}= \frac{s}{s^2-a^2} $
+\end{enumerate}
+ \subsection{First Shifting Theorem}%
+   \label{sub:First Shifting Theorem}
+   \textbf{   For Laplace Transforms :-
+}
+   If $\mathcal{L} \left \{f(t) \right \} = f(s)$ then $ \mathcal{L} \left \{e^{at}f(t) \right \} = f(s-a) $ \\
+
+   eg :- $ \mathcal{L} \left \{e^{2t}\cdot \sin 3t  \right \} = \frac{3}{(s-2)^2+9} $ \\
+   $ \mathcal{L} \left \{e^{-7t}t^4 \right \} = \frac{\Gamma (5) }{(s+7)^5}$ \\
+   \textbf{   For Inverse Laplace Transform-\\
+}
+If   $\mathcal{L}^{-1} \left \{ f(s) \right \} = f(t) $ then, $\mathcal{L}^{-1} \left \{f(s-a) \right \}= e^{at} f(t) = e^{at} \mathcal{L}^{-1} \left \{f(s) \right \}    $ \\
+
+eg:- $\mathcal{L}^{-1} \left \{\frac{s}{s^2-4s+13} \right \} = \mathcal{L}^{-1} \left \{ \frac{s-2+2}{(s-2)^2+9}  \right \} \implies  \mathcal{L}^{-1} \left \{ \frac{s-2}{(s-2)^2+9} \right \} + 2 \mathcal{L}^{-1} \left \{ \frac{1}{(s-2)^2+9} \right \} = e^{2t} \cos 3t + \frac{2}{3}e^{2t}\sin 3t   $
+
+\subsection{Second Shifting Theorem}%
+  \label{sub:Second Shifting Theorem}
+  \textbf{Unit Step (Heaviside) function} :- $H(t-a) = \begin{cases}
+    1 & t\ge a \\
+    0 & t <a
+  \end{cases}$ \\
+  For Laplace Transforms :- 
+If $\mathcal{L} \left \{f(t) \right \} = f(s)$ then $\mathcal{L} \left \{f(t-a)H(t-a) \right \} = e^{-as} f(s)  $ \\
+
+eg:- $q(t) = \begin{cases} 
+  \sin(t-\frac{\pi}{3}) & t\ge \frac{\pi}{3} \\
+  0 & t<\frac{\pi}{3}
+\end{cases}
+= \sin(t-\frac{\pi}{3}) \begin{cases}
+  1 & t \ge \frac{\pi}{3} \\
+  0 & t< \frac{\pi}{3}
+\end{cases}$ \\
+$\mathcal{L} \left \{q(t) \right \} = \mathcal{L} \left \{\sin(t-\frac{\pi}{3}) H(t-\frac{\pi}{3}) \right \} \implies e^{\frac{\pi}{3}s}\cdot \frac{1}{s^2+1}   $ \\
+For Inverse Laplace Transform :- If $\mathcal{L}^{-1} \left \{f(s) \right \} = f(t)$ then $\mathcal{L}^{-1} \left \{e^{-as} f(s)  \right \} = f(t-a)H(t-a) $ \\
+$\mathcal{L}^{-1} \left \{e^{-as} \frac{1}{s-1}  \right \} = e^{t-a} H(t-a) $
+
+\section{Multiplication Property}%
+  \label{sec:Multiplication Property}
+  If $\mathcal{L} \left \{f(t) \right \}   = f(s)$ then  \fbox{ $ \mathcal{L} \left \{t^{n} f(t)  \right \} = (-1)^{n} \frac{d^{n}}{ds^{n}} f(s)  $}\\
+  $ \mathcal{L} \left \{t\sin 2t \right \} = - \frac{d}{ds}(\frac{2}{s^2+4})= \frac{4s}{(s^2 + 4)^2}$ Now, $\int_0^{\infty}  e^{-3t} t\sin 2t dt = \frac{4\cdot 3}{(3^2+4)^2}  $
+
+hi my name is js  
+
+
+\end{document} 

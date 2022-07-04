@@ -1,0 +1,84 @@
+\documentclass[pdf]{beamer}
+\mode<presentation>{}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{multicol}
+% \usepackage{ulem}
+% \usepackage{enumitem}
+\usepackage{graphicx}
+\title{Physics Presentation}
+\author{Syed Khalid}
+\usetheme{Frankfurt}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage  
+\end{frame}
+    
+\begin{frame}{Postulates of QM}
+  
+\begin{enumerate}
+  \item System represented by vector $\ket{\Psi(t)} \in \text{\textbf{H}} $, Hilbert Space - complete vector space with an inner product.
+  \item Dynamical variables $f(x,p)$ correspond to Hermitian Operators $\hat{F}(\hat{x},\hat{p})$, where $\bra{x'} \hat{x} \ket{x} = x \delta(x'-x)$ and $ [\hat{x},\hat{p}] = i\hbar $ 
+  \item Measurement of $ \hat{A} $ will yield $ a $ with probability $ \propto   | \bra{\Psi_{a}  } \ket{\Psi} |^{2}   $ and $ \ket{\Psi} \rightarrow \ket{\Psi_{a}  }  $ where $ \hat{A}\ket{\psi_{a}} = a \ket{ \psi_{a}  } $
+  \item System obeys Schrodinger's Equation. $i\hbar\frac{d}{dt}\ket{\Psi(t)} = \hat{H}\ket{\Psi(t)}  $
+\end{enumerate} 
+\end{frame}
+
+\begin{frame}
+\begin{align*}
+& [\hat{x},\hat{p}] = \hat{x} \hat{p} - \hat{p} \hat{x} =i \hbar \hat{I} \\   
+& \bra{x'} [\hat{x},\hat{p}]  \ket{x} = i\hbar\bra{x'}\ket{x} = i\hbar \delta(x-x') =\\
+& \bra{x'} \hat{x} \hat{p} \ket{x} - \bra{x'} \hat{p} \hat{x} \ket{x} = \bra{x'} \hat{p} \ket{x} (x'-x) \\
+& \bra{x'} \hat{p} \ket{x} = i\hbar \frac{\delta(x'-x)}{x'-x} = -i\hbar \pdv{\delta(x'-x)}{x} = \bra{x'} (-i\hbar \pdv{x}  ) \ket{x} \\
+& \therefore \hat{p} = -i\hbar \pdv{x} \text{in the position basis.}  \\
+& \text{ Similarly in the momentum basis,}\hat{x}= i\hbar \pdv{p}
+& 
+\end{align*}
+
+\end{frame}
+
+\begin{frame}{Density Matrix}
+  For a pure state $\ket{\psi}=\sum_{i} c_{i} \ket{\phi_{}  }  $, the density matrix representation is $ \hat{\rho} = \ket{\psi}\bra{\psi} $ with matrix elements $ \rho_{ij} = \bra{\phi_{i} \ket{\psi} } \bra{\psi}\ket{\phi_{j}  } = c_{i} c_{j} ^{*}      $. \\
+   
+  In a mixed ensemble of systems, let $ p_{k}   $ be the probability of the state of a system chosen at random being
+   $ \ket{\psi_{k}}$.Then the density matrix of the ensemble is-
+   \begin{align*}
+            \hat{\rho} = \sum_{k} p_{k} \ket{\psi_{k}  } \bra{\psi_{k}  } = \sum_{k} p_{k} \hat{\rho_{k}  } \\ 
+       \rho_{ij} = \sum_{k} p_{k} c_{ik}c_{jk}^{*} = \ev{c_{i} c_{j} ^{*}  }
+   .\end{align*}
+   Say, $ \hat{A}\ket{a} = a \ket{a} $ \& projection operator $ \hat{P_{a}} = \ket{a}\bra{a} $. Then probability of getting measurement $ a $
+   is $ P(a) = \Tr( \hat{\rho} \hat{P_{a}  }) $ \\
+
+   \begin{columns}
+     \begin{column}{0.6\textwidth}
+   Normalization: $ \Tr( \hat{\rho}) = 1$ \\
+   Expectation Value: $ \ev{ \hat{A}} = \Tr( \hat{\rho} \hat{A}) $ \\ 
+   Von Neumann Eqn: $ \dv{t} \hat{\rho} = -\frac{i}{\hbar} [\hat{H},\hat{\rho}]  $
+     \end{column}
+     \begin{column}{0.4\textwidth}
+      For a pure state $ \hat{\rho}^{2} = \hat{\rho}  $, but for a mixed state $ Tr( \hat{\rho}^2) <1  $ 
+     \end{column}
+   \end{columns}
+\end{frame}
+
+\begin{frame}{Quantum Optics}
+  For a two level system of atoms, let $ \ket{\psi_{1}  }, \ket{\psi_{2}  } $ represent the ground state and excited state having energies $ E_1,E_2 $ respectively. Let the incident
+  light have $ \omega = \omega_0 + \delta \omega \approx \frac{E_2-E_1}{\hbar}$.
+   Then $     \ket{\Psi(\vec{r},t)} = c_{1} \psi_{1}(\vec{r})e^{-\frac{iE_1t}{\hbar}} + c_{1} \psi_{1}(\vec{r})e^{-\frac{iE_1t}{\hbar}} $. \\
+  Let the hamiltonian be split into two terms, one for non-interacting atom and the other pertubation term for light atom interaction $ \hat{H} = \hat{H_{0}}(\vec{r})   + \hat{V}(t)   $.
+  Semi-classically, $ \hat{V}(t) = e \vec{r}\cdot\vec{E}(t) = exE_0\cos \omega t $. We have the following coupled equations controlling the system:
+  \begin{align*}
+    \dv{c_1(t)}{t} = \frac{i}{2} \Omega_{R} c_2(t)(e^{i(\omega -\omega_0)t} + e^{-i(\omega +\omega_0)t} ) \\
+     \dv{c_2(t)}{t} = \frac{i}{2} \Omega_{R} c_1(t)(e^{i(\omega +\omega_0)t} + e^{-i(\omega -\omega_0)t} )
+  .\end{align*}
+  % 
+  \textbf{Rabi Oscillations}
+  Defined as $ \Omega_{R} =\frac{1}{\hbar} |\mu_{12} E_0|  $ where $ \mu_{ij} = -e \bra{i}x\ket{j}   $ is the dipole matrix element. 
+\end{frame}
+\end{document}
+ 
+
