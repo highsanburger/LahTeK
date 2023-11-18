@@ -1,0 +1,530 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+
+\begin{document}
+
+\title{Answers to Caegory Theory by Steve Awodey}
+\author{Syed Khalid}
+\date{Nov, 2023}
+\maketitle
+
+\section{Ch1 Categories}
+
+\begin{enumerate}
+	\item
+	      \textbf{\textit{Question:}} The objects of \textbf{Rel} are sets, and an arrow $ A \to B $ is a relation from $A$ to $B$, that is, a subset $R \subseteq A \times B$. The equality relation $\{\langle a,a \rangle \in A \times A | a \in A\}$ is the identity arrow on a set $A$. Compositoin in \textbf{Rel} is to be given by
+	      \[
+		      S \circ R = \{ \langle a, c \rangle \in A \times C \mid \exists b ( \langle a,b \rangle \in R \ \& \ \langle b,c \rangle \in S) \}
+	      \]
+	      for $R \subseteq A \times B$ and $S \subseteq B \times C$.
+	      \begin{enumerate}
+		      \item  Show that \textbf{Rel} is a category.
+		      \item     Show also that there is a functor $G : \textbf{Sets} \to \textbf{Rel}$ taking objects to themselves and each function $f : A \to B$ to its graph,
+		            \[
+			            G(f) = \{ \langle a, f(a) \rangle \in A \times B \mid a \in A \}.
+		            \]
+		      \item  Finally, show that there is a functor $C : \textbf{Rel}^{op} \to \textbf{Rel}$ taking each relation $R \subseteq A \times B$ to its converse $R^c \subseteq A \times B$, where, \[
+			            \langle a,b \rangle \in R^c \Leftrightarrow \langle b,a \rangle \in R.
+		            \]
+	      \end{enumerate}
+
+
+	      \textbf{\textit{Answer:}}
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+	\item
+	      \textbf{\textit{Question:}} Consider the following isomorphisms of categories and determine which hold.
+	      \begin{enumerate}
+		      \item  $\textbf{Ref} \cong \textbf{Ref}^{op}$
+		      \item  $\textbf{Sets} \cong \textbf{Sets}^{op}$
+		      \item  For a fixed set $X$ with powerset $P(X)$, as poset categories $P(X) \cong P(X)^{op}$ (the arrows in $P(X)$ are subset inclusions $ A \subseteq B$ for all $A,B \subseteq X$).
+	      \end{enumerate}
+
+
+	      \textbf{\textit{Answer:}}
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+	\item
+	      \textbf{\textit{Question:}}
+	      \begin{enumerate}
+		      \item  Show that in \textbf{Sets}, the isomorphisms are exactly the bijections.
+		      \item  Show that in \textbf{Monoids}, the isomorphisms are exactly the bijective homomorphisms.
+		      \item  Show that in \textbf{Posets}, the isomorphisms are \textit{not} the same as bijective homomorphisms.
+
+	      \end{enumerate}
+	      \textbf{\textit{Answer:}}
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+	\item
+	      \textbf{\textit{Question:}}
+	      Let $X$ be a topological space and preorder the points by \textit{specializatoin:} $x \leq y$ iff $y$ is contained in every open set that contains $x$. Show that this is a preorder, and that it is a poset if $X$ is $T_0$ (for any two distinct points, there is some open set containing one but not the other). Show that the ordering is trivial is $X$ is $T_1$ (for any two distinct points, each is contained in an open set not containing the other).
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      For any category \textbf{C}, define a functor $ U : \textbf{C} / C \to C $ from the slice category over an object $ C $ that "forgets about $ C $."  Find a functor $ F : \textbf{C} / C \to C^{\to}$  to the arrow category such that $ \textbf{dom} \circ F = U $
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      Construct the "coslice category" $ C / \textbf{C}  $ of a category \textbf{C} under an object $ C $ from the slice category $ \textbf{C} / C $ and the "dual category" operation $ -^{op} $ .
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      Let $ 2 = {a,b} $ be any set with exactly 2 elements $ a $ and $ b $. Define a functor $ F : \textbf{Sets} / 2 \to \textbf{Sets} \times \textbf{Sets}  $ with $ F(f : X \to 2) = (f^{-1}(a), f^{-1}(b)) $ . Is this an isomorphism of categories? What about the analogous situation with an one-element set $ 1 = {a} $ instead of 2?
+
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      Any category \textbf{C} determines a preorder $ P(\textbf{C} ) $ by defining a binary relation $ \leq  $ on the objects by
+	      \[
+		      A \leq B \ \text{if and only if there is an arrow} \  A \to B
+	      \]
+	      Show that $ P $ determines a functor from categories to preorders, by defining its effect on functors between categories and checking the required conditions. Show that $ P $ is a (one-sided) inverse to the evident inclusion functor of preorders into categories.
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      Describe the free categories, on the following graphs by determining their objects, arrows, and composition operations.
+	      \begin{enumerate}
+
+		      \item \begin{tikzcd}
+			            a \arrow[rr, "e"] &  & b
+		            \end{tikzcd}
+
+		      \item \begin{tikzcd}
+			            a \arrow[rr, "e"] &  & b \arrow[ll, shift left=2]
+		            \end{tikzcd}
+
+		      \item \begin{tikzcd}
+			            a \arrow[r, "e"] \arrow[rd, "g"'] & b \arrow[d, "f"] \\
+			            & c
+		            \end{tikzcd}
+
+		      \item \begin{tikzcd}
+			            a \arrow[r, "e"] \arrow[rd, "g"'] & b \arrow[d, "f"] \arrow[l, "h" description, shift left=2] \\
+			            & c
+		            \end{tikzcd}
+	      \end{enumerate}
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      How many free categories on graphs are there which have exactly six arrow? Draw the graphs that generate these categories.
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      Show that the free monoid functor
+	      \[
+		      M : \textbf{Sets} \rightarrow \textbf{Mon}
+	      \]
+	      \begin{enumerate}
+		      \item Assume the particular choice $ M(X) = X^*   $ and define its effect
+		            \[
+			            M(f) : M(A) \rightarrow M(B)
+		            \]
+		            on a function $ f : A \rightarrow B$ to be
+		            \[
+			            M(f)(a_1...a_k) = f(a_1) ... f(a_k), \ \ \ a_1,...a_k \in A
+		            \]
+		      \item Assume only the UMP of the free monoid and use it to determine M on functions, showing the result to be a functor.
+
+	      \end{enumerate}
+	      Reflect on how these two approaches are related
+
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      Verify the UMP for free categories on graphs, defined as above with arrows being sequences of edges. Specifically, let $ \textbf{C} (G) $ be the free category on the graph $ G $ , so defined, and $ i : G \rightarrow U(\textbf{C}(G) ) $ the graph homomorphism taking vertices and edges to themselves, regarded as objects and arrows in $ \textbf{C} (G) $ . Show that for any category \textbf{D} and graph homomorphism $ f : G \rightarrow U(\textbf{D} ) $ , there is a unique functor
+	      \[
+		      \overline{h} : \textbf{C}(G) \rightarrow D
+	      \]
+	      with
+	      \[ U(\overline(h)) \circ i = h ,\]
+
+	      where $ U : \textbf{Cat} \rightarrow \textbf{Graph}  $ is the underlying graph functor.
+
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      Use the Cayley representaton to show that every small category is isomorphic to a "concrete" one, that is, one in which the objects are sets and the arrows are functions between them.
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      The notion of a category can also be defined with just one sort (arrows) rather than two (arrows and objects); the domains and codomains are taken to be certain \textit{arrows} that act as units under composition, which is partially defined. Read about this definition in section I.1 of Mac Lane's \textit{Categories for the Working Mathematician} , and do the exercise mentioned there, showing that it is equivalent to the usual definition.
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+\end{enumerate}
+
+\section{Ch2 Abstract Structures}
+
+\begin{enumerate}
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      Show that a function between sets is an epimorphism if and only if it is surjective. Conclude that the isos in \textbf{Sets} are exactly the epi-monos.
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      Show that in a poset category, all arrows are both monic and epic.
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      (Inverses are unique.) If an arrow $ f : A \to B $ has inverses $ g, g' : B \to A $ (i.e., $ g \circ f = 1_A $ and $ f \circ g = 1_B $, and similarly for $ g' $ ), then $ g = g' $.
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      With regard to a commutative triangle,
+
+	      \begin{tikzcd}
+		      A \arrow[r, "f" description] \arrow[rd, "h" description] & B \arrow[d, "g" description] \\
+		      & C
+	      \end{tikzcd}
+
+	      in any category \textbf{C} , show
+	      \begin{enumerate}
+		      \item if $ f $ and $ g $ are isos (resp. monos, resp. epis), so is $ h $ ;
+		      \item if $ h $ is monic, so is $ f $ ;
+		      \item if $ h $ is epice, so is $ g $ ;
+		      \item (by example) if $ h $ is monic, $ g $ need not be.
+	      \end{enumerate}
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      Show that the following are equivalent for an arrow
+	      \[
+		      f : A \to B
+	      \]
+	      in any category:
+	      \begin{enumerate}
+		      \item $ f $ is an isomorphism.
+		      \item $ f $ is both a mono and a split epi.
+		      \item $ f $ is both a split mono and an epi.
+		      \item $ f $ is both a split mono and a split epi.
+	      \end{enumerate}
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      Show that a homomorphism $ h : G \to H $ of graphs is monic just if it is injective on both edges and vertices.
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      Show that in any category, any retract of a projective object is also projective.
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      Show that all sets are projective (use the axiom of choice).
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      Show that the epis among posets are the surjections (on elements), and that the one-element poset $ \textbf{1}  $ is projective.
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      Show that sets, regarded as discrete posets, are projective in the category of posets (use the foregoing exercises). Give an example of a poset that is not projective. Show that every projective poset is discrete, that is, a set. conclude that \textbf{Sets} is (isomorphic to) the "full subcategory" of projectives in \textbf{Pos}, conisting of all projective posets and all monotone maps between them.
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      Let $ A $ be a set. Define an \textit{A-monoid} to be a monoid $ M $ equipped with a function $ m : A \to U(M) $ (to the underlying set of $ M $ ). A morphism $ h : (M,m) \to (N,n) $ of \textit{A}-monoids is to be a monoid homomorphism $ h : M \to N $ such that $ U(h) \circ m = n $ (a commutative triangle). Together with the evident identities and composites, this defines a category \textit{A}-\textbf{Mon} of \textit{A}-monoids.
+
+	      Show that an initial object in \textit{A}-\textbf{Mon} is the same thing as a free monoid $ M(A) $ on $ A $. (Hint: compare their respective UMPs.)
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      Show that for any Boolean algebra $ B $, Boolean homomorphisms $ h : B \to \textbf{2}  $ correspond exactly to ultrafilters in $ B $ .
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      In any category with binary products, show directly that
+
+	      \begin{displaymath}
+		      A \times (B \times C) \cong (A \times B) \times C
+	      \end{displaymath}
+
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      \begin{enumerate}
+		      \item For any index set $ I $ , define the product $ \prod_{i \in I} X_i $ of an \textit{I}-indexed family of objects $ (X_i)_{i \in I} $ in a category, by giving a UMP  generalizing that for binary products ( the case $ I = 2 $ ).
+
+		      \item Show that in \textbf{Sets} , for any set \textit{X} the set $ X^I $ of all functions $ f : I \to X $ has this UMP, with respect to the "constant family" where $ X_i = X $ for all $ i \in I $ , and thus
+
+		            \begin{displaymath}
+			            X^I \cong \prod_{i \in I} X
+		            \end{displaymath}
+
+
+
+	      \end{enumerate}
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      Given a category \textbf{C} with objects \textit{A} and \textit{B}, define the category $ \textbf{C}_{A,B} $ to have objects $ (X,x_1,x_2) $ where $ x_1 : X \to A, x_2 : X \to B  $, and with arrows $ f : (X,x_1, x_2) \to (Y, y_1, y_2) $ being arrows $ f : X \to Y $ with $ y_1 \circ f = x_1 $ and $ y_2 \circ f = x_2 $.
+
+	      Show that $ \textbf{C}_{A,B} $ has a terminal object just in case \textit{A} and \textit{B} have a product in \textbf{C} .
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      In the category of types $ \textbf{C} (\lambda) $ of the $ \lambda  $-calculus, determine the product functor $ A,B \mapsto A \times B $ explicitly. Also show that, for any fixed type $ A $, there is a functor $ A \to (-) : \textbf{C} (\lambda) \to \textbf{C} (\lambda) $, taking any type $ X $ to $ A \to X $.
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      In any category \textbf{C} with products, define the \textit{graph} of an arrow $ f : A \to B $ to be the monomorphism
+	      \begin{displaymath}
+		      \Gamma (f) =  \langle 1_A, f \rangle : A \rightarrowtail A \times B
+	      \end{displaymath}
+	      (Why is this monic?). Show that for $ \textbf{C} = \textbf{Sets}  $ this determines a functor $ \Gamma : \textbf{Sets} \to \textbf{Rel}  $ to the category \textbf{Rel} of relations, as defined in the exercises to Chapter 1. ( To get an actual relation $ R(f) \subseteq A \times B $ , take the image of $ \Gamma (f) : A \rightarrowtail A \times B $ .)
+
+
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+
+	\item
+	      \textbf{\textit{Question:}}
+
+	      Show that the forgetful functor $ U : \textbf{Mon} \to \textbf{Sets}  $ from monoids to sets is representable. Infer that $ U $ preserves all (small) products.
+
+	      \textbf{\textit{Answer:}}
+
+	      \begin{align*}
+		      % Type your solution here
+	      \end{align*}
+
+\end{enumerate}
+
+\end{document}
