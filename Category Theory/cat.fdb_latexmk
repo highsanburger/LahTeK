@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1700280759 "cat.tex" "cat.pdf" "cat" 1700280760 0
+["pdflatex"] 1700290837 "cat.tex" "cat.pdf" "cat" 1700290838 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1689853683 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1689853683 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1689853683 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -135,8 +135,8 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1689853683 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1697685755 4483110 adb1e1d04498b9576f1f17c4219c5e03 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1697685660 6768056 f8a3f6a5a87bafe86245ae1331cdd506 ""
-  "cat.aux" 1700280760 245 7b7fef1dff30e0387c4a8627739aa320 "pdflatex"
-  "cat.tex" 1700280759 17223 9b3d4e71a0e629c372f86f270f869465 ""
+  "cat.aux" 1700290838 246 467af07bd1913a77848065c42a196599 "pdflatex"
+  "cat.tex" 1700290836 18184 e3a8eb6132ac071c49ebb64c3866b1d0 ""
   (generated)
   "cat.aux"
   "cat.log"
